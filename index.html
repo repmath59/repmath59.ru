@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Репетитор по математике и информатике для учеников 5–11 классов. Подготовка к ОГЭ и ВПР. Первое пробное занятие бесплатно!" />
+  <meta name="keywords" content="репетитор по математике, подготовка к ОГЭ, ВПР 2025, репетитор 5 класс, информатика ОГЭ, репетитор онлайн, math59" />
+  <meta name="author" content="Репетитор по математике и информатике" />
+  <meta property="og:title" content="Репетитор по математике и информатике | ОГЭ, ВПР, 5–11 класс" />
+  <meta property="og:description" content="Подготовка к ОГЭ и ВПР с индивидуальным подходом. Первое занятие — бесплатно!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://math59.ru/preview.jpg" />
+  <title>Репетитор по математике и информатике | Подготовка к ОГЭ и ВПР, 5–11 класс</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: white;
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .whatsapp-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.4);
+      transition: 0.3s;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6);
+      text-decoration: none;
+      z-index: 100;
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover, .whatsapp-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.6);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .problems {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .problem-item {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .problem-icon {
+      background: #ff6b6b;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+color: white;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .solution-icon {
+      background: #4ecdc4;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .problem-text {
+      font-weight: 600;
+      color: #d63031;
+    }
+
+    .solution-text {
+      color: #27ae60;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .feature {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      width: 300px;
+      text-align: center;
+    }
+
+    .feature h3 {
+      margin: 15px 0;
+      color: #4e54c8;
+    }
+
+    .feature p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .education {
+      background-color: #f1f3f5;
+      text-align: center;
+      border-radius: 12px;
+      padding: 25px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .education p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .review {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 350px;
+      position: relative;
+      font-style: italic;
+      color: #555;
+    }
+
+    .review::before {
+      content: """;
+      font-size: 60px;
+      color: #ddd;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .review-author {
+      font-weight: bold;
+      margin-top: 10px;
+      font-style: normal;
+      color: #333;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .submit-btn {
+      background: #4e54c8;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(78, 84, 200, 0.4);
+    }
+
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #4e54c8;
+      color: white;
+      padding: 16px 40px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(78, 84, 200, 0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(78, 84, 200, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .whatsapp-btn {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+      .feature, .review, .form-container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="https://wa.me/79991234567" class="whatsapp-btn" target="_blank">💬 WhatsApp</a>
+    <div class="container">
+      <h1>Репетитор по математике и информатике</h1>
+      <p>Подготовка к ОГЭ, ВПР и школьным экзаменам с 5 по 11 класс</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Почему дети теряются в математике?</h2>
+      <div class="problems">
+        <div class="problem-item">
+          <div class="problem-icon">–</div>
+          <div>
+<strong class="problem-text">Ребёнок не понимает тему, но стесняется спросить</strong>
+            <p>В классе не всегда уделяют внимание каждому — и пробелы накапливаются.</p>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">–</div>
+          <div>
+            <strong class="problem-text">Боится ОГЭ и ВПР: не знает, с чего начать</strong>
+            <p>Страх перед экзаменами мешает даже тем, кто вроде бы знает материал.</p>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">–</div>
+          <div>
+            <strong class="problem-text">Занимается дома, но результатов нет</strong>
+            <p>Без правильной стратегии подготовки усилия тратятся впустую.</p>
+          </div>
+        </div>
+        <div class="problem-item">
+          <div class="solution-icon">✓</div>
+          <div>
+            <strong class="solution-text">Я помогу закрыть пробелы, выстроить уверенность и сдать экзамен на высокий балл</strong>
+            <p>Индивидуальный подход, понятные объяснения и реальная практика — от 5-го класса до ОГЭ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #f1f3f5;">
+    <div class="container">
+      <h2>Почему выбирают меня?</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>🎯 Подготовка к ОГЭ и ВПР</h3>
+          <p>Разбираем типовые задания, демоверсии, ловушки экзаменов. Учимся не бояться формул и графиков.</p>
+        </div>
+        <div class="feature">
+          <h3>👨‍🏫 Индивидуально</h3>
+          <p>Занятия строятся под уровень ученика: от базы до сложных задач второй части ОГЭ.</p>
+        </div>
+        <div class="feature">
+          <h3>📱 Онлайн или очно</h3>
+          <p>Удобный формат: через Zoom или в вашем городе. Гибкое расписание.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Обо мне</h2>
+      <div class="education">
+        <p>🎓 Выпускник физико-математического факультета МПГУ<br>
+        ✅ 7 лет преподаю математику и информатику<br>
+        🏆 Подготовил более 80 учеников к ОГЭ (средний балл — 4+)<br>
+        💡 Использую современные методики: визуализация, интерактив, игровые приёмы</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Отзывы учеников и родителей</h2>
+      <div class="reviews">
+        <div class="review">
+          За полгода сын перешёл с тройки на твёрдую пятёрку. Особенно помогли разборы ВПР — теперь не боится проверочных работ.
+          <div class="review-author">— Марина, мама ученика 7 класса</div>
+        </div>
+        <div class="review">
+          Готовилась к ОГЭ с нуля. Боялась информатику, а в итоге сдала на 18 баллов! Спасибо за терпение и понятные объяснения.
+          <div class="review-author">— Даша, 9 класс</div>
+        </div>
+        <div class="review">
+          Очень доступно объясняет сложные темы. Ребёнок стал увереннее, даже в классе чаще поднимает руку.
+          <div class="review-author">— Сергей, папа ученика 6 класса</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="form">
+    <div class="container">
+      <h2>Запишитесь на пробное занятие</h2>
+      <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">
+        Оставьте заявку — и я свяжусь с вами в течение 24 часов. Первое занятие — <strong>бесплатно!</strong>
+      </p>
+      <form action="https://formspree.io/f/xqkrwvwp" method="POST" class="form-container">
+        <div class="form-group">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" placeholder="Например, Ольга" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Телефон или Telegram</label>
+          <input type="text" id="phone" name="contact" placeholder="Например, @olga_tg или +7 999 123-45-36" required />
+        </div>
+        <div class="form-group">
+<label for="class">Класс ученика</label>
+          <select id="class" name="class" required>
+            <option value="">Выберите класс</option>
+            <option value="5-6">5–6 класс</option>
+            <option value="7-8">7–8 класс</option>
+            <option value="9">9 класс (ОГЭ)</option>
+            <option value="10-11">10–11 класс</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subject">Предмет</label>
+          <select id="subject" name="subject" required>
+            <option value="">Выберите предмет</option>
+            <option value="Математика">Математика</option>
+            <option value="Информатика">Информатика</option>
+            <option value="Математика и информатика">Математика и информатика</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="goal">Цель занятий</label>
+          <textarea id="goal" name="goal" placeholder="Например: подготовка к ОГЭ, подтянуть оценки, разобрать ВПР..."></textarea>
+        </div>
+        <div style="text-align: center;">
+          <button type="submit" class="submit-btn">Отправить заявку</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <a href="#form" class="btn">Записаться на пробное занятие</a>
+        <p style="margin-top: 15px; color: #777;">Первое занятие — бесплатно!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 <a href="https://math59.ru" style="color: #4e54c8; text-decoration: none;">math59.ru</a> — репетитор по математике и информатике. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/79507443435" class="whatsapp-float" target="_blank">💬</a>
+
+</body>
+</html>
