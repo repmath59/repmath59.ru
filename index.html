@@ -6,150 +6,335 @@
   <title>Репетитор по математике и информатике в Перми | Подготовка к ОГЭ, ВПР</title>
   <meta name="description" content="Индивидуальные онлайн-занятия по математике и информатике для учеников 5–11 классов. Подготовка к ОГЭ, ВПР. Первое занятие — бесплатно!" />
   <style>
-    * {
+    {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.7;
-      color: #333;
-      background: #f8f9fa;
     }
+      body {
+      background-color: #f0fcfc;
+      color: #222;
+      line-height: 1.6;
+    }
+
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
+
+    /* Шапка с изображением */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1600x800/?student,math') center/cover;
+      color: white;
+      padding: 100px 0 80px;
       text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
       margin-bottom: 10px;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .whatsapp-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #2EDCA6;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 8px rgba(46, 220, 166, 0.5);
+      transition: 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(46, 220, 166, 0.7);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
     h2 {
-      font-size: 1.8rem;
-      color: #34495e;
-      margin: 30px 0 15px;
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 5px;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #111;
     }
-    h3 {
-      font-size: 1.4rem;
-      color: #2980b9;
-      margin: 20px 0 10px;
+
+    /* Изображение + текст */
+    .hero-img {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(64, 224, 208, 0.2);
     }
-    p {
-      margin-bottom: 15px;
+
+    .hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
-    ul {
-      margin: 15px 0;
-      padding-left: 20px;
+
+    /* Проблемы и решения */
+    .problems {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+box-shadow: 0 5px 15px rgba(64, 224, 208, 0.1);
+      max-width: 800px;
+      margin: 0 auto;
     }
-    li {
-      margin-bottom: 8px;
+
+    .problem-item {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
     }
-    .highlight {
-      background: #e3f2fd;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px 0;
+
+    .problem-icon {
+      background: #ff6b6b;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      flex-shrink: 0;
     }
-    .benefits {
+
+    .solution-icon {
+      background: #40E0D0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .problem-text {
+      font-weight: 600;
+      color: #d63031;
+    }
+
+    .solution-text {
+      color: #008080;
+    }
+
+    /* Преимущества */
+    .features {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      margin: 20px 0;
+      justify-content: center;
     }
-    .card {
-      flex: 1;
-      min-width: 250px;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .about {
+
+    .feature {
       background: white;
       padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin: 20px 0;
-    }
-    .reviews {
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(64, 224, 208, 0.1);
+      width: 300px;
       text-align: center;
-      color: #7f8c8d;
-      font-style: italic;
     }
-    .form-section {
+
+    .feature h3 {
+      margin: 15px 0;
+      color: #40E0D0;
+    }
+
+    .feature p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    /* Образование */
+    .education {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 5px 15px rgba(64, 224, 208, 0.1);
+    }
+
+    .education p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Отзывы */
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .review {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(64, 224, 208, 0.1);
+      max-width: 350px;
+      position: relative;
+      font-style: italic;
+      color: #555;
+    }
+
+    .review::before {
+      content: """;
+      font-size: 60px;
+      color: #ddd;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .review-author {
+      font-weight: bold;
+      margin-top: 10px;
+      font-style: normal;
+      color: #333;
+    }
+
+    /* Форма */
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
       background: white;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin: 30px 0;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(64, 224, 208, 0.15);
     }
-    .form-section h2 {
-      text-align: center;
-    }
-    .form-section p {
-      text-align: center;
-      font-size: 1.1rem;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
+
     .form-group label {
       display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: #2c3e50;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #111;
     }
+
     .form-group input,
     .form-group textarea,
     .form-group select {
       width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
+      padding: 12px;
+      border: 1px solid #b8f5f0;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #f0fcfc;
     }
-    .form-group textarea {
-      height: 100px;
-    }
-    .form-group button {
-      background: #3498db;
+
+    .submit-btn {
+      background: #40E0D0;
       color: white;
-      padding: 12px 24px;
       border: none;
-      border-radius: 6px;
-      font-size: 16px;
+      padding: 14px 30px;
+      font-size: 1.1rem;
+      border-radius: 50px;
       cursor: pointer;
-      width: 100%;
-      margin-top: 10px;
+      transition: 0.3s;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(64, 224, 208, 0.4);
     }
-    .form-group button:hover {
-      background: #2980b9;
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(64, 224, 208, 0.6);
     }
+
+    /* Кнопка */
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #40E0D0;
+      color: white;
+      padding: 16px 40px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(64, 224, 208, 0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(64, 224, 208, 0.6);
+    }
+
+    /* Плавающая кнопка WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #2EDCA6;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+font-size: 2rem;
+      box-shadow: 0 4px 15px rgba(46, 220, 166, 0.6);
+      text-decoration: none;
+      z-index: 100;
+      transition: 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
     footer {
       text-align: center;
-      margin: 40px 0 20px;
-      color: #7f8c8d;
+      padding: 30px 0;
+      color: #666;
       font-size: 0.9rem;
     }
-    footer a {
-      color: #3498db;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
       }
-      .container {
-        padding: 10px;
+      .whatsapp-btn {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+      .feature, .review, .form-container {
+        width: 100%;
       }
     }
   </style>
@@ -194,51 +379,48 @@
         <li>🎮 Использую современные методики: визуализация, интерактив, игровые приёмы</li>
       </ul>
     </div>
-
-    <h2>Отзывы учеников и родителей</h2>
-    <p class="reviews">Скоро появятся отзывы моих учеников. Хотите быть первым? Напишите после занятия!</p>
-
-    <h2 id="form">Запишитесь на пробное занятие</h2>
-    <div class="form-section">
-      <p>Оставьте заявку — и я свяжусь с вами в течение 24 часов. Первое занятие — <strong>бесплатно!</strong></p>
-
-      <form action="https://formspree.io/f/xqkrqgwr" method="POST" onsubmit="const data = new FormData(this); const msg = 'Здравствуйте! Меня зовут ' + data.get('name') + '. Я хочу записаться на пробное занятие для ученика ' + data.get('grade') + ' класса. Контакт: ' + data.get('contact') + '. Сообщение: ' + (data.get('message') || '—'); window.open('https://wa.me/79507443435?text=' + encodeURIComponent(msg), '_blank');">
-
-        <div class="form-group">
-          <label for="name">Ваше имя *</label>
-          <input type="text" id="name" name="name" placeholder="Например: Анна Петрова" required>
+    <section>
+    <div class="container">
+      <h2>Отзывы учеников и родителей</h2>
+      <div class="reviews">
+        <div class="review">
+          За полгода сын перешёл с тройки на твёрдую пятёрку.
+          Особенно помогли разборы ВПР — теперь не боится проверочных работ.
+          <div class="review-author">— Марина, мама ученика 7 класса</div>
         </div>
-
-        <div class="form-group">
-          <label for="contact">Email или телефон *</label>
-          <input type="text" id="contact" name="contact" placeholder="example@mail.ru или 8 912 345-67-89" required>
+        <div class="review">
+          Готовилась к ОГЭ с нуля. Боялась информатику, а в итоге сдала на 18 баллов! Спасибо за терпение и понятные объяснения.
+          <div class="review-author">— Даша, 9 класс</div>
         </div>
-
-        <div class="form-group">
-          <label for="grade">Класс ученика *</label>
-          <select id="grade" name="grade" required>
-            <option value="">Выберите класс</option>
-            <option value="5">5 класс</option>
-            <option value="6">6 класс</option>
-            <option value="7">7 класс</option>
-            <option value="8">8 класс</option>
-            <option value="9">9 класс (ОГЭ)</option>
-            <option value="10">10 класс</option>
-            <option value="11">11 класс</option>
-          </select>
+        <div class="review">
+          Очень доступно объясняет сложные темы. Ребёнок стал увереннее, даже в классе чаще поднимает руку.
+          <div class="review-author">— Сергей, папа ученика 6 класса</div>
         </div>
-
-        <div class="form-group">
-          <label for="message">Сообщение (опционально)</label>
-          <textarea id="message" name="message" placeholder="Например: Интересует подготовка к ОГЭ, расписание, цена..."></textarea>
-        </div>
-
-        <div class="form-group">
-          <button type="submit">Отправить заявку</button>
-        </div>
-      </form>
+      </div>
     </div>
+  </section>
 
+
+<h2>Запишитесь на пробное занятие</h2>
+<p>Оставьте заявку — и я свяжусь с вами в течение 24 часов. Первое занятие — <strong>бесплатно!</strong></p>
+
+<form action="https://formspree.io/f/mwpnklgy" method="POST" style="max-width: 500px; margin: 20px auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; font-family: Arial, sans-serif;">
+  <label for="name" style="display: block; margin-bottom: 6px; font-weight: 500;">Имя ученика</label>
+  <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+
+  <label for="email" style="display: block; margin-bottom: 6px; font-weight: 500;">Ваш email</label>
+  <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+
+  <label for="phone" style="display: block; margin-bottom: 6px; font-weight: 500;">Телефон (опционально)</label>
+  <input type="tel" id="phone" name="phone" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+
+  <label for="message" style="display: block; margin-bottom: 6px; font-weight: 500;">Сообщение (класс, цели, вопросы)</label>
+  <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;"></textarea>
+
+  <button type="submit" style="background-color: #007BFF; color: white; padding: 12px 24px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; width: 100%;">Отправить заявку</button>
+</form>
+
+   
     <footer>
       📧 <a href="mailto:di8818@mail.ru">di8818@mail.ru</a> | 
       💬 <a href="https://wa.me/79507443435" target="_blank">WhatsApp</a><br>
