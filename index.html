@@ -16,8 +16,8 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.7;
-      color: #2d3748;
-      background: #f9fafb;
+      color: #5a4e4d; /* Темно-нюдовый цвет текста */
+      background: #fdf6f0; /* Светло-нюдовый цвет фона */
       padding: 20px;
     }
 
@@ -27,28 +27,42 @@
       padding: 0 20px;
     }
 
-    h1, h2, h3 {
-      color: #1a202c;
-      margin: 30px 0 15px;
+    /* Шапка профиля */
+    .profile-header {
+      background: #ffffff; /* Белый фон для контраста */
+      text-align: center;
+      padding: 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      margin-bottom: 40px;
     }
 
-    h1 {
+    .profile-header h1 {
       font-size: 42px;
-      text-align: center;
-      margin-top: 40px;
+      color: #5a4e4d; /* Темно-нюдовый цвет заголовка */
+    }
+
+    .profile-header p {
+      font-size: 20px;
+      color: #7d6e6b; /* Нежный нюдовый оттенок */
+    }
+
+    h2, h3 {
+      color: #5a4e4d; /* Цвет заголовков */
+      margin: 30px 0 15px;
     }
 
     h2 {
       font-size: 32px;
       text-align: center;
-      border-bottom: 2px solid #e2e8f0;
+      border-bottom: 2px solid #e0c7c1; /* Легкий нюдовый цвет */
       padding-bottom: 10px;
       margin-top: 60px;
     }
 
     h3 {
       font-size: 22px;
-      color: #2c5282;
+      color: #8e7a77; /* Нежный цвет для подзаголовков */
     }
 
     p {
@@ -61,7 +75,10 @@
     }
 
     .highlight {
-      color: #2c5282;
+      color: #5a4e4d; /* Цвет выделенных фраз */
+      background-color: #f2d3d0; /* Светлый нюдовый фон для выделения */
+      padding: 2px 4px;
+      border-radius: 4px;
     }
 
     /* Секции */
@@ -83,7 +100,7 @@
     /* Отзывы */
     .reviews {
       font-style: italic;
-      background: #ebf4ff;
+      background: #f7e4e1; /* Нежный фон для отзывов */
       padding: 20px;
       border-radius: 10px;
       margin: 20px 0;
@@ -98,17 +115,17 @@
       max-width: 600px;
       margin: 30px auto;
       padding: 32px;
-      background: #f7f9fb;
+      background: #fef6f4; /* Легкий нюдовый фон формы */
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      border: 1px solid #e2e8f0;
+      border: 1px solid #e0c7c1; /* Нежный нюдовый цвет для рамки */
       text-align: left;
     }
 
     .form-container label {
       display: block;
       margin-bottom: 6px;
-      color: #2d3748;
+      color: #5a4e4d; /* Цвет меток полей */
       font-weight: 500;
       font-size: 15px;
     }
@@ -118,24 +135,24 @@
       width: 100%;
       padding: 12px 14px;
       margin-bottom: 18px;
-      border: 1px solid #cbd5e0;
+      border: 1px solid #d4bcb8; /* Нежный цвет границ */
       border-radius: 8px;
       font-size: 15px;
       background: white;
-      color: #2d3748;
+      color: #5a4e4d; /* Цвет текста в полях */
       transition: border 0.3s ease;
     }
 
     .form-container input:focus,
     .form-container textarea:focus {
       outline: none;
-      border-color: #2c5282;
+      border-color: #8e7a77; /* Цвет границы при фокусе */
     }
 
     .form-container button {
       width: 100%;
       padding: 14px;
-      background: #2c5282;
+      background: #8e7a77; /* Цвет кнопки */
       color: white;
       font-size: 16px;
       font-weight: 600;
@@ -146,7 +163,7 @@
     }
 
     .form-container button:hover {
-      background: #1e4063;
+      background: #6e5b5a; /* Более темный оттенок для кнопки при наведении */
       transform: scale(1.02);
     }
 
@@ -154,7 +171,7 @@
       display: block;
       text-align: center;
       margin-top: 16px;
-      color: #718096;
+      color: #9e8884; /* Цвет для маленького текста */
       font-size: 13px;
     }
 
@@ -162,13 +179,13 @@
     footer {
       text-align: center;
       margin-top: 80px;
-      color: #718096;
+      color: #9e8884; /* Цвет футера */
       font-size: 14px;
       padding: 20px;
     }
 
     @media (max-width: 768px) {
-      h1 {
+      .profile-header h1 {
         font-size: 34px;
       }
       h2 {
@@ -178,19 +195,18 @@
         padding: 20px;
       }
     }
+
   </style>
 </head>
 <body>
 
   <div class="container">
 
-    <!-- Заголовок -->
-    <section>
+    <!-- Шапка профиля -->
+    <div class="profile-header">
       <h1>Репетитор по математике и информатике</h1>
-      <p style="text-align: center; font-size: 20px; color: #4a5568;">
-        Подготовка к ОГЭ, ВПР и школьным экзаменам с 5 по 11 класс
-      </p>
-    </section>
+      <p>Подготовка к ОГЭ, ВПР и школьным экзаменам с 5 по 11 класс</p>
+    </div>
 
     <!-- Почему дети теряются -->
     <section>
@@ -198,8 +214,7 @@
       <ul>
         <li>В классе не всегда уделяют внимание каждому — и проблемы накапливаются.</li>
         <li>Страх перед экзаменами мешает даже тем, кто вроде бы знает материал.</li>
-
-<li>Без правильной стратегии подготовки усилия тратятся впустую.</li>
+        <li>Без правильной стратегии подготовки усилия тратятся впустую.</li>
         <li>Индивидуальный подход, понятные объяснения и реальная практика — с 5 по 11 классы.</li>
       </ul>
     </section>
@@ -210,7 +225,7 @@
       <h3>Подготовка к ОГЭ и ВПР</h3>
       <p>Разбираем типовые задания, демоверсии, ловушки экзаменов. Учимся не бояться формул и графиков.</p>
 
-      <h3>Индивидуально</h2>
+      <h3>Индивидуально</h3>
       <p>Занятия строятся под уровень ученика: от базы до сложных задач второй части ОГЭ.</p>
 
       <h3>Онлайн</h3>
@@ -226,7 +241,7 @@
         <li>Эксперт ОГЭ 2024 года</li>
         <li>✅ Более 10 лет репетитор по предметам математика и информатика</li>
         <li>Подготовила более 40 учеников к ОГЭ (средний балл — 4+)</li>
-        <li>Использую современные методики: визуализация, интерактив, игровые приёмы</li>
+        <li>Использую современные методики: визуализация, интерактив, игровые приемы</li>
       </ul>
     </section>
 
@@ -242,7 +257,7 @@
     <!-- Форма -->
     <section id="form" class="form-section">
       <h2>Запишитесь на пробное занятие</h2>
-      <p style="text-align: center; font-size: 18px; color: #4a5568; max-width: 600px; margin: 16px auto;">
+      <p style="text-align: center; font-size: 18px; color: #7d6e6b; max-width: 600px; margin: 16px auto;">
         Оставьте заявку — и я свяжусь с вами в течение 24 часов. Первое занятие — <strong class="highlight">бесплатно!</strong>
       </p>
 
